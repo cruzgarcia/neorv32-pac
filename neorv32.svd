@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
+    <vendor>neorv32</vendor>
+    <name>SOC</name>
+    <description><![CDATA[NEORV32 2021-10-18 15:22:10]]></description>
+
+    <addressUnitBits>8</addressUnitBits>
+    <width>32</width>
+    <size>32</size>
+    <access>read-write</access>
+    <resetValue>0x00000000</resetValue>
+    <resetMask>0xFFFFFFFF</resetMask>
+
+    <peripherals>
+
+        <peripheral>
+            <name>LEDS</name>
+            <baseAddress>0xFFFFFFC0</baseAddress>
+            <groupName>LEDS</groupName>
+            <registers>
+                <register>
+                    <name>OUT</name>
+                    <addressOffset>0x0008</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>ledr</name>
+                            <msb>0</msb>
+                            <bitRange>[0:0]</bitRange>
+                            <lsb>0</lsb>
+                            <description><![CDATA[The Red LED on the main iCEBreaker board.]]></description>
+                        </field>
+                        <field>
+                            <name>ledg</name>
+                            <msb>1</msb>
+                            <bitRange>[1:1]</bitRange>
+                            <lsb>1</lsb>
+                            <description><![CDATA[The Green LED on the main iCEBreaker board.]]></description>
+                        </field>
+                        <field>
+                            <name>hledr1</name>
+                            <msb>2</msb>
+                            <bitRange>[2:2]</bitRange>
+                            <lsb>2</lsb>
+                            <description><![CDATA[The center Red LED #1 on the iCEBreaker head.]]></description>
+                        </field>
+                        <field>
+                            <name>hledg2</name>
+                            <msb>3</msb>
+                            <bitRange>[3:3]</bitRange>
+                            <lsb>3</lsb>
+                            <description><![CDATA[Green LED #2 on the iCEBreaker head.]]></description>
+                        </field>
+                        <field>
+                            <name>hledg3</name>
+                            <msb>4</msb>
+                            <bitRange>[4:4]</bitRange>
+                            <lsb>4</lsb>
+                            <description><![CDATA[Green LED #3 on the iCEBreaker head.]]></description>
+                        </field>
+                        <field>
+                            <name>hledg4</name>
+                            <msb>5</msb>
+                            <bitRange>[5:5]</bitRange>
+                            <lsb>5</lsb>
+                            <description><![CDATA[Green LED #4 on the iCEBreaker head.]]></description>
+                        </field>
+                        <field>
+                            <name>hledg5</name>
+                            <msb>6</msb>
+                            <bitRange>[6:6]</bitRange>
+                            <lsb>6</lsb>
+                            <description><![CDATA[Green LED #5 on the iCEBreaker head.]]></description>
+                        </field>
+                    </fields>
+                </register>
+            </registers>
+            <addressBlock>
+                <offset>0</offset>
+                <size>0x4</size>
+                <usage>registers</usage>
+            </addressBlock>
+        </peripheral>
+
+        <peripheral>
+            <name>MTIME</name>
+            <baseAddress>0xFFFFFF90</baseAddress>
+            <groupName>MTIME</groupName>
+            <registers>
+                <register>
+                    <name>TIME_LO</name>
+                    <description><![CDATA[Time register low word.]]></description>
+                    <addressOffset>0x0000</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>TIME_LO</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>TIME_HI</name>
+                    <description><![CDATA[Time register high word.]]></description>
+                    <addressOffset>0x0004</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>TIME_HI</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>TIMECMP_LO</name>
+                    <description><![CDATA[Compare register low word.]]></description>
+                    <addressOffset>0x0008</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>TIMECMP_LO</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>TIMECMP_HI</name>
+                    <description><![CDATA[Compare register high word.]]></description>
+                    <addressOffset>0x000C</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>TIMECMP_HI</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                        </field>
+                    </fields>
+                </register>
+            </registers>
+            <addressBlock>
+                <offset>0</offset>
+                <size>0x10</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <interrupt>
+                <name>MTIME</name>
+                <value>1</value>
+            </interrupt>
+        </peripheral>
+
+        <peripheral>
+            <name>UART</name>
+            <baseAddress>0xFFFFFFA0</baseAddress>
+            <groupName>UART</groupName>
+            <registers>
+                <register>
+                    <description><![CDATA[Cotrol Register]]></description>
+                    <name>CTRL</name>
+                    <addressOffset>0x0000</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>BAUD</name>
+                            <msb>11</msb>
+                            <bitRange>[11:0]</bitRange>
+                            <lsb>0</lsb>
+                        </field>
+                        <field>
+                            <name>RTS_EN</name>
+                            <msb>20</msb>
+                            <bitRange>[20:20]</bitRange>
+                            <lsb>20</lsb>
+                            <description><![CDATA[Enable hardware flow control: Assert RTS output if UART.RX is ready to receive]]></description>
+                        </field>
+                        <field>
+                            <name>CTS_EN</name>
+                            <msb>21</msb>
+                            <bitRange>[21:21]</bitRange>
+                            <lsb>21</lsb>
+                            <description><![CDATA[Enable hardware flow control: Assert RTS output if UART.RX is ready to receive]]></description>
+                        </field>
+                        <field>
+                            <name>PMODE0</name>
+                            <msb>22</msb>
+                            <bitRange>[22:22]</bitRange>
+                            <lsb>22</lsb>
+                            <description><![CDATA[Parity configuration (0=even; 1=odd)]]></description>
+                        </field>
+                        <field>
+                            <name>PMODE1</name>
+                            <msb>23</msb>
+                            <bitRange>[23:23]</bitRange>
+                            <lsb>23</lsb>
+                            <description><![CDATA[Parity bit enabled when set]]></description>
+                        </field>
+                        <field>
+                            <name>PRSC</name>
+                            <msb>26</msb>
+                            <bitRange>[26:24]</bitRange>
+                            <lsb>24</lsb>
+                            <description><![CDATA[BAUD rate clock prescaler select]]></description>
+                        </field>
+                        <field>
+                            <name>CTS</name>
+                            <msb>27</msb>
+                            <bitRange>[27:27]</bitRange>
+                            <lsb>27</lsb>
+                            <description><![CDATA[Current state of CTS input]]></description>
+                        </field>
+                        <field>
+                            <name>EN</name>
+                            <msb>28</msb>
+                            <bitRange>[28:28]</bitRange>
+                            <lsb>28</lsb>
+                            <description><![CDATA[UART global enable]]></description>
+                        </field>
+                        <field>
+                            <name>TX_BUSY</name>
+                            <msb>28</msb>
+                            <bitRange>[28:28]</bitRange>
+                            <lsb>28</lsb>
+                            <description><![CDATA[Transmitter is busy when set]]></description>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>RXTX_DATA</name>
+                    <description><![CDATA[Data]]></description>
+                    <addressOffset>0x0004</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <description><![CDATA[Receive/transmit data]]></description>
+                            <name>RXTX_DATA</name>
+                            <msb>7</msb>
+                            <bitRange>[7:0]</bitRange>
+                            <lsb>0</lsb>
+                        </field>
+                        <field>
+                            <description><![CDATA[RX parity error detected when set]]></description>
+                            <name>PERR</name>
+                            <msb>28</msb>
+                            <bitRange>[28:28]</bitRange>
+                            <lsb>28</lsb>
+                        </field>
+                        <field>
+                            <description><![CDATA[RX frame error (not valid stop bit) wdetected when set]]></description>
+                            <name>FERR</name>
+                            <msb>29</msb>
+                            <bitRange>[29:29]</bitRange>
+                            <lsb>29</lsb>
+                        </field>
+                        <field>
+                            <description><![CDATA[RX data overrun when set]]></description>
+                            <name>OVERR</name>
+                            <msb>30</msb>
+                            <bitRange>[30:30]</bitRange>
+                            <lsb>30</lsb>
+                        </field>
+                        <field>
+                            <description><![CDATA[RX data available when set]]></description>
+                            <name>AVAIL</name>
+                            <msb>31</msb>
+                            <bitRange>[31:31]</bitRange>
+                            <lsb>31</lsb>
+                        </field>
+                    </fields>
+                </register>
+            </registers>
+            <addressBlock>
+                <offset>0</offset>
+                <size>0x8</size>
+                <usage>registers</usage>
+            </addressBlock>
+            <interrupt>
+                <name>uart</name>
+                <value>0</value>
+            </interrupt>
+        </peripheral>
+
+    </peripherals>
+
+    <vendorExtensions>
+        <memoryRegions>
+            <memoryRegion>
+                <name>INST_MEM</name>
+                <baseAddress>0x00000000</baseAddress>
+                <size>0x00800000</size>
+            </memoryRegion>
+            <memoryRegion>
+                <name>DATA_MEM</name>
+                <baseAddress>80000000</baseAddress>
+                <size>0x00002000</size>
+            </memoryRegion>
+        </memoryRegions>
+        <constants>
+            <constant name="CONFIG_CLOCK_FREQUENCY" value="48000000" />
+            <constant name="CONFIG_CPU_HAS_INTERRUPT" value="None" />
+            <constant name="CONFIG_CPU_RESET_ADDR" value="537133056" />
+            <constant name="CONFIG_CPU_HAS_ICACHE" value="None" />
+            <constant name="CONFIG_CPU_VARIANT_LITE" value="None" />
+            <constant name="CONFIG_CPU_HUMAN_NAME" value="NEORV32" />
+            <constant name="CONFIG_CPU_NOP" value="nop" />
+            <constant name="CONFIG_CSR_DATA_WIDTH" value="32" />
+            <constant name="CONFIG_CSR_ALIGNMENT" value="32" />
+            <constant name="CONFIG_BUS_STANDARD" value="WISHBONE" />
+            <constant name="CONFIG_BUS_DATA_WIDTH" value="32" />
+            <constant name="CONFIG_BUS_ADDRESS_WIDTH" value="32" />
+            <constant name="TIMER0_INTERRUPT" value="1" />
+            <constant name="UART_INTERRUPT" value="0" />
+        </constants>
+    </vendorExtensions>
+</device>
