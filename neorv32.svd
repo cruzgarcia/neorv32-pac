@@ -15,64 +15,67 @@
     <peripherals>
 
         <peripheral>
-            <name>LEDS</name>
+            <name>GPIO</name>
             <baseAddress>0xFFFFFFC0</baseAddress>
-            <groupName>LEDS</groupName>
+            <groupName>GPIO</groupName>
             <registers>
                 <register>
-                    <name>OUT</name>
+                    <name>INPUT_LO</name>
+                    <addressOffset>0x0000</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>INPUT_LO</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                            <description><![CDATA[GPIO Input low]]></description>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>INPUT_HI</name>
+                    <addressOffset>0x0004</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
+                        <field>
+                            <name>INPUT_HI</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                            <description><![CDATA[GPIO Input high]]></description>
+                        </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>OUTPUT_LO</name>
                     <addressOffset>0x0008</addressOffset>
                     <resetValue>0x00</resetValue>
                     <size>32</size>
                     <fields>
                         <field>
-                            <name>ledr</name>
-                            <msb>0</msb>
-                            <bitRange>[0:0]</bitRange>
+                            <name>OUTPUT_LO</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
                             <lsb>0</lsb>
-                            <description><![CDATA[The Red LED.]]></description>
+                            <description><![CDATA[GPIO Output low]]></description>
                         </field>
+                    </fields>
+                </register>
+                <register>
+                    <name>OUTPUT_HI</name>
+                    <addressOffset>0x000C</addressOffset>
+                    <resetValue>0x00</resetValue>
+                    <size>32</size>
+                    <fields>
                         <field>
-                            <name>ledg</name>
-                            <msb>1</msb>
-                            <bitRange>[1:1]</bitRange>
-                            <lsb>1</lsb>
-                            <description><![CDATA[The Green LED.]]></description>
-                        </field>
-                        <field>
-                            <name>hledr1</name>
-                            <msb>2</msb>
-                            <bitRange>[2:2]</bitRange>
-                            <lsb>2</lsb>
-                            <description><![CDATA[The center Red.]]></description>
-                        </field>
-                        <field>
-                            <name>hledg2</name>
-                            <msb>3</msb>
-                            <bitRange>[3:3]</bitRange>
-                            <lsb>3</lsb>
-                            <description><![CDATA[Green LED #2]]></description>
-                        </field>
-                        <field>
-                            <name>hledg3</name>
-                            <msb>4</msb>
-                            <bitRange>[4:4]</bitRange>
-                            <lsb>4</lsb>
-                            <description><![CDATA[Green LED #3]]></description>
-                        </field>
-                        <field>
-                            <name>hledg4</name>
-                            <msb>5</msb>
-                            <bitRange>[5:5]</bitRange>
-                            <lsb>5</lsb>
-                            <description><![CDATA[Green LED #4]]></description>
-                        </field>
-                        <field>
-                            <name>hledg5</name>
-                            <msb>6</msb>
-                            <bitRange>[6:6]</bitRange>
-                            <lsb>6</lsb>
-                            <description><![CDATA[Green LED #5]]></description>
+                            <name>OUTPUT_HI</name>
+                            <msb>31</msb>
+                            <bitRange>[31:0]</bitRange>
+                            <lsb>0</lsb>
+                            <description><![CDATA[GPIO Output high]]></description>
                         </field>
                     </fields>
                 </register>
