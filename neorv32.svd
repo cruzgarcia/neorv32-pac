@@ -183,6 +183,49 @@
                             <lsb>0</lsb>
                         </field>
                         <field>
+                            <name>RX_EMPTY</name>
+                            <msb>13</msb>
+                            <bitRange>[13:13]</bitRange>
+                            <lsb>13</lsb>
+                            <description><![CDATA[RX FIFO is empty]]></description>
+                        </field>
+                        <field>
+                            <name>RX_HALF</name>
+                            <msb>14</msb>
+                            <bitRange>[14:14]</bitRange>
+                            <lsb>14</lsb>
+                            <description><![CDATA[RX FIFO is at least half-full]]></description>
+                        </field>
+
+                        <field>
+                            <name>RX_FULL</name>
+                            <msb>15</msb>
+                            <bitRange>[15:15]</bitRange>
+                            <lsb>15</lsb>
+                            <description><![CDATA[RX FIFO is full]]></description>
+                        </field>
+                        <field>
+                            <name>TX_EMPTY</name>
+                            <msb>16</msb>
+                            <bitRange>[16:16]</bitRange>
+                            <lsb>16</lsb>
+                            <description><![CDATA[ TX FIFO is empty]]></description>
+                        </field>
+                        <field>
+                            <name>TX_HALF</name>
+                            <msb>17</msb>
+                            <bitRange>[17:17]</bitRange>
+                            <lsb>17</lsb>
+                            <description><![CDATA[ TX FIFO is at least half-full]]></description>
+                        </field>
+                        <field>
+                            <name>TX_FULL</name>
+                            <msb>18</msb>
+                            <bitRange>[18:18]</bitRange>
+                            <lsb>18</lsb>
+                            <description><![CDATA[ TX FIFO is full]]></description>
+                        </field>
+                        <field>
                             <name>RTS_EN</name>
                             <msb>20</msb>
                             <bitRange>[20:20]</bitRange>
@@ -232,10 +275,24 @@
                             <description><![CDATA[UART global enable]]></description>
                         </field>
                         <field>
+                            <name>RX_IRQ</name>
+                            <msb>29</msb>
+                            <bitRange>[29:29]</bitRange>
+                            <lsb>29</lsb>
+                            <description><![CDATA[Receiver is busy when set]]></description>
+                        </field>
+                        <field>
+                            <name>TX_IRQ</name>
+                            <msb>30</msb>
+                            <bitRange>[30:30]</bitRange>
+                            <lsb>30</lsb>
+                            <description><![CDATA[Transmitter is busy when set]]></description>
+                        </field>
+                        <field>
                             <name>TX_BUSY</name>
-                            <msb>28</msb>
-                            <bitRange>[28:28]</bitRange>
-                            <lsb>28</lsb>
+                            <msb>31</msb>
+                            <bitRange>[31:31]</bitRange>
+                            <lsb>31</lsb>
                             <description><![CDATA[Transmitter is busy when set]]></description>
                         </field>
                     </fields>
